@@ -1,0 +1,10 @@
+
+{% block cat_block%}
+
+<form class="form1" method="post" action="{% url 'translate'%}">
+        {% csrf_token %}
+        {{ formm }}
+    <button type="submit">Go</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'home.html'%}
+
+{% block search_block%}
+{% endblock %}
+
+{% block body_block%}
+
+    <div class="login_form">
+
+    <p>Login Please</p>
+
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Login">
+    </form>
+
+    </div>
+
+{% endblock %}

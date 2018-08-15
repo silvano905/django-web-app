@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/my_style.css'%}"/>
+
+</head>
+<body>
+
+<ul class="wrap">
+    <li><a href="{% url 'translate'%}" class="active">Home</a></li>
+    <li><a href="{% url 'list'%}">List</a></li>
+    <li><a href="{% url 'create'%}">Create</a></li>
+    <li><a href="{% url 'login'%}">Login</a></li>
+    <li><a href="{% url 'logout'%}">Logout</a></li>
+    <li><a href="{% url 'form'%}" id="hide_me">Register</a></li>
+
+      {% if user.is_authenticated %}
+        <li class="hi_user"><p>Hello {{ user.username }}</p></li>
+      {% endif %}
+
+        {% block search_block%}
+            {% include 'include_me.html'%}
+        {% endblock %}
+
+</ul>
+
+
+{% block body_block%}
+
+    <p>Use the search box to look up the <strong>Spanish</strong> translation of a word</p>
+
+{% endblock %}
+
+<script>
+
+    function s() {
+              {% if user.is_authenticated %}
+                 document.getElementById('hide_me').style.visibility = 'hidden';
+              {% else %}
+                  document.getElementById('hide_me').style.visibility = 'visible';
+              {% endif %}
+
+
+    }
+    s()
+
+</script>
+
+</body>
+</html>

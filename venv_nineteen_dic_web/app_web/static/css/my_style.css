@@ -1,0 +1,143 @@
+
+        body{
+            background-image: url('images/flower.jpg');
+            background-size: 100%;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
+
+/* -------------------hello message -------------------- */
+
+        li.hi_user{
+            float: right;
+            color: #c8cd00;
+            padding-right: 10px;
+        }
+
+/* ----------------include_me.html---------------------- */
+
+        .form1{
+            float: right;
+            padding: 15px 10px;
+            color: white;
+            background-color: #333;
+        }
+        .form1 button:hover{
+            background-color: #00cd1f;
+            border: solid #00cd1f;
+        }
+
+
+/* ------------------word_list.html--------------------- */
+
+        a.word_list{
+            text-decoration: none;
+            color: black;
+            margin-left: 20px;
+        }
+        a.word_list:hover{
+            color: aquamarine;
+        }
+        .word_list_paragraph{
+            background-color: #19865C;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+        .word_list_paragraph form{
+            text-align: center;
+            padding-top: 10px;
+        }
+
+/* ------------------makeword_form.html--------------------- */
+
+        .create_form{
+            text-align: center;
+            background-color: #19865C;
+            margin-top: 15px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+
+        .create_button:hover{
+            background-color: #3875d7;
+            border: solid #3875d7;
+        }
+
+/* ------------------word_details.html--------------------- */
+
+        .word_details{
+            background-color: #19865C;
+            padding-top: 10px;
+            margin-top: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+        .details_label{
+            text-align: center;
+        }
+
+        .btn-delete{
+            background-color: red;
+            color: white;
+            padding: 5px 5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+        .btn-update{
+            background-color: blue;
+            color: white;
+            padding: 5px 5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+
+/* ------------------login.html--------------------- */
+
+        .login_form{
+            text-align: center;
+            background-color: #19865C;
+            margin-top: 15px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+
+
+/* ------------------form.html--------------------- */
+
+        .register_form{
+            text-align: center;
+            background-color: #19865C;
+            margin-top: 15px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }

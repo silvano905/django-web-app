@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{% extends 'home.html' %}
+
+        {% block search_block%}
+        {% endblock %}
+
+{% block body_block%}
+
+<div class="word_list_paragraph">
+
+    <form method="GET" action="{% url 'list'%}">
+       {% csrf_token %}
+        <label>search word: <input type="text" name="q"></label>
+        <input type="submit" value="Search">
+    </form>
+
+
+    {% for word in object_list %}
+        <a href="{{word.id}}" class="word_list">{{ word.english }}</a> <br>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

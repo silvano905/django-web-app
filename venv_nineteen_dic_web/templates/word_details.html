@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'home.html' %}
+        {% block search_block%}
+        {% endblock %}
+
+{% block body_block%}
+
+    <div class="word_details">
+
+    <p class="details_label">Word Info</p>
+
+    <p>English: {{ word_list.english }}</p>
+    <p>Spanish: {{ word_list.spanish }}</p>
+    <p>Sentence: {{ word_list.sentence }}</p>
+{#    <img src="{{ word_list.profile_pic.url }}">#}
+        {% if word_list.profile_pic %}
+      <img src="{{ word_list.profile_pic.url }}" width="240px">
+  {% endif %}
+
+    <a href="{% url 'delete' pk=word_list.id%}" class="btn-delete">delete</a>
+    <a href="{% url 'update' pk=word_list.pk%}" class="btn-update">Update</a>
+
+    </div>
+
+{% endblock %}
